@@ -1,52 +1,73 @@
-body{
+// this is scss or aka sass (ok me commenting is gonna make this code look sooo long)
+// it's visually kinda easy to see the parents and children here
+// like for example the body here has 2 children which is <nav> and <main>
+// or <main> having 2 children both being <section>
+// u can visually see it without having to open html 
+// another advantage is that it is a programming version of css
+// i dont have to keep typing the same lines of codes repeatedly
+// if there's some lines of code that im repeating alot, i can write those lines inside smtg called a function(mixin) and i only have to call the function by typing the name of the function n the computer will type the lines of i wrote inside the function in all the places i called the function
+// i can also write a variable($) and use it in many places in the code
+
+
+
+body {
     background-color: #04050a;
     color: whitesmoke;
     padding: 0;
     margin: 0;
     display: flex;
-    nav{
+
+    nav {
         display: flex;
         flex-direction: column;
-        /* background-color: #808080; */
         width: fit-content;
-        height: calc(100vh-10px);
+        height: calc(100vh - 10px);
         justify-content: space-around;
-        /* gap: 60px; */
-        padding: 10px;
-        a{
-            /* background-color: #d10a0a; */
-            /* text-align: center; */
+        padding-left: 10px;
+
+        a {
             color: whitesmoke;
             text-decoration: none;
         }
     }
-    main{
+
+    main {
         display: flex;
-        /* background-color: #520505; */
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        width: 100%;
         flex-wrap: wrap;
-    }
-    
-    section{
-        /* background-color: #fff; */
-        height: 50%;
-        display: flex;
-    }
-    section:nth-child(2){
-        display: flex;
-        flex-direction: column;
-        padding-left: 10%;
-        justify-content: center;
-    }
-    section:nth-child(1){
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            height: auto;
-            width: auto;
+        width: fit-content;
+        max-width: 150vh;
+        margin: auto;
+        align-self: center;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: aqua;
+        padding: 20px;
+        section {
+            // since the main layout has 2 children. giving width 50% means it will take half the size
+            // so both the sections will be 50% in width and fit inside the main which is 100%
+            width: 50%;
+            background-color: red;
+            // &:nth-child() is same like section:nth-child()
+            &:nth-child(1) {
+                img {
+                    // keeps the aspect. ig i need some time experimenting sometimes on my own cuz gpt will prompt a 4 line code for no reason but it's ok as long as it works
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &:nth-child(2) {
+                flex: 1 0;
+                padding: 10px;
+                button{
+                    margin-left: auto;
+                    border: none;
+                    &:hover {
+                        color: black;
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 }
