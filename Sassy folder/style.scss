@@ -8,25 +8,42 @@
 // if there's some lines of code that im repeating alot, i can write those lines inside smtg called a function(mixin) and i only have to call the function by typing the name of the function n the computer will type the lines of i wrote inside the function in all the places i called the function
 // i can also write a variable($) and use it in many places in the code
 
+
 body {
     background-color: #04050a;
     color: whitesmoke;
     padding: 0;
     margin: 0;
     display: flex;
+    @include centering();
 
     // body's child 1
     nav {
         display: flex;
         flex-direction: column;
         width: fit-content;
-        height: calc(100vh - 10px);
+        height: 100vh;
         justify-content: space-around;
-        padding-left: 10px;
-
         a {
             color: whitesmoke;
             text-decoration: none;
+            // this makes it flexible or grow. it's flex-grow
+            flex: 1;
+            padding: 5px 5px 5px 10px;
+            display: flex;
+            align-items: center;
+            &:hover{
+                background-color: #1a1d23;
+            }
+        }
+        // . means it's a class and then name (.classname) in html i put class="active" in home. so this is the active class
+        // so the styles i add in .active applies only to those tags that have class="active"
+        .active{
+            background-color: rgba(0, 0, 139, 0.255);
+            border: 1px solid white;
+            &:hover{
+                background-color: rgb(255, 157, 0);
+            }
         }
     }
 
@@ -44,6 +61,7 @@ body {
         align-items: center;
         // background-color: aqua;
         padding: 20px;
+        cursor: url('');
         @media (max-width: 480px) {
             // this media part means all the code i wrote here is only affected if screen width is 480 or below for mobile screen. they are called media queries
             flex-direction: column;
