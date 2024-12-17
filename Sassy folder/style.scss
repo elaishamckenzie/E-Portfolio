@@ -1,11 +1,11 @@
-// this is scss or aka sass (ok me commenting is gonna make this code look sooo long)
+// this is scss or aka sass (ok me commenting is gonna make this code look so long)
 // it's visually kinda easy to see the parents and children here
 // like for example the body here has 2 children which is <nav> and <main>
 // or <main> having 2 children both being <section>
 // u can visually see it without having to open html 
 // another advantage is that it is a programming version of css
-// i dont have to keep typing the same lines of codes repeatedly
-// if there's some lines of code that im repeating alot, i can write those lines inside smtg called a function(mixin) and i only have to call the function by typing the name of the function n the computer will type the lines of i wrote inside the function in all the places i called the function
+// i don't have to keep typing the same lines of codes repeatedly
+// if there's some lines of code that im repeating a lot, i can write those lines inside something called a function(mixin) and i only have to call the function by typing the name of the function n the computer will type the lines of i wrote inside the function in all the places i called the function
 // i can also write a variable($) and use it in many places in the code
 
 
@@ -15,7 +15,6 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    @include centering();
 
     // body's child 1
     nav {
