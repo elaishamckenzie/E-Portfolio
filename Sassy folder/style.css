@@ -28,7 +28,6 @@ body main {
   align-self: center;
   justify-content: space-around;
   align-items: center;
-  background-color: aqua;
   padding: 20px;
 }
 @media (max-width: 480px) {
@@ -39,7 +38,6 @@ body main {
 }
 body main section {
   width: 50%;
-  background-color: red;
 }
 body main section:nth-child(1) img {
   width: 100%;

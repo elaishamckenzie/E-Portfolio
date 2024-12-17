@@ -42,7 +42,7 @@ body {
         align-self: center;
         justify-content: space-around;
         align-items: center;
-        background-color: aqua;
+        // background-color: aqua;
         padding: 20px;
         @media (max-width: 480px) {
             // this media part means all the code i wrote here is only affected if screen width is 480 or below for mobile screen. they are called media queries
@@ -55,7 +55,7 @@ body {
             // since the main layout has 2 children. giving width 50% means it will take half the size
             // so both the sections will be 50% in width and fit inside the main which is 100%
             width: 50%;
-            background-color: red;
+            // background-color: red;
             // first child inside main and also &:nth-child() is same like section:nth-child()
             &:nth-child(1) {
                 img {
