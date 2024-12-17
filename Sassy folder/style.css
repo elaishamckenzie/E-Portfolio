@@ -23,14 +23,19 @@ body main {
   flex-wrap: wrap;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 150vh;
+  max-width: 175vh;
   margin: auto;
   align-self: center;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background-color: aqua;
   padding: 20px;
+}
+@media (max-width: 480px) {
+  body main {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 body main section {
   width: 50%;
