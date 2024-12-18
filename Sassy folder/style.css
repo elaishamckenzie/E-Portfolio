@@ -25,11 +25,11 @@ body nav a:hover {
   background-color: #1a1d23;
 }
 body nav .active {
-  background-color: rgba(0, 0, 139, 0.255);
-  border: 1px solid white;
+  background-color: #1a1d23;
+  border-radius: 0 50% 50% 0;
 }
 body nav .active:hover {
-  background-color: rgb(255, 157, 0);
+  background-color: rgba(255, 157, 0, 0.505);
 }
 body main {
   display: flex;
@@ -56,6 +56,8 @@ body main section {
 body main section:nth-child(1) img {
   width: 100%;
   height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section:nth-child(2) {
   flex: 1 0;

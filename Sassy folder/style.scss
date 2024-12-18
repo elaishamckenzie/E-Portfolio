@@ -38,10 +38,11 @@ body {
         // . means it's a class and then name (.classname) in html i put class="active" in home. so this is the active class
         // so the styles i add in .active applies only to those tags that have class="active"
         .active{
-            background-color: rgba(0, 0, 139, 0.255);
-            border: 1px solid white;
+            background-color: #1a1d23;
+            // curving corners [ topleft | topright | bottomright | bottomleft ]
+            border-radius: 0 50% 50% 0;
             &:hover{
-                background-color: rgb(255, 157, 0);
+                background-color: rgba(255, 157, 0, 0.505);
             }
         }
     }
@@ -79,6 +80,7 @@ body {
                     // keeps the aspect. ig i need some time experimenting sometimes on my own cuz gpt will prompt a 4 line code for no reason but it's ok as long as it works
                     width: 100%;
                     height: auto;
+                    object-fit: contain;
                 }
             }
             // second child of main which is selecting a specific section:nth-child(2) inside main only. not all sections in the html
