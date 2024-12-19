@@ -37,13 +37,14 @@ body main {
   flex-wrap: wrap;
   width: -moz-fit-content;
   width: fit-content;
+  margin: auto;
   max-width: 175vh;
   margin: auto;
   align-self: center;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  cursor: url("");
+  cursor: url("../img/png-transparent-match-matches-fire-matchbox-cartoon-safety-matchstick-isolated-ignite-graphic-thumbnail_1-removebg-preview.png");
 }
 @media (max-width: 480px) {
   body main {

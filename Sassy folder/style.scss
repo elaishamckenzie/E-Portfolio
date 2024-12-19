@@ -53,6 +53,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         width: fit-content;
+        margin: auto;
         // that's the max i could go before it hit the scroll option
         // it means that generally it will be fit-content but if the width is too big it will stop at 170% of the view height cuz width is typically longer than height
         max-width: 175vh;
@@ -62,7 +63,7 @@ body {
         align-items: center;
         // background-color: aqua;
         padding: 20px;
-        cursor: url('');
+        cursor: url('../img/png-transparent-match-matches-fire-matchbox-cartoon-safety-matchstick-isolated-ignite-graphic-thumbnail_1-removebg-preview.png');
         @media (max-width: 480px) {
             // this media part means all the code i wrote here is only affected if screen width is 480 or below for mobile screen. they are called media queries
             flex-direction: column;
