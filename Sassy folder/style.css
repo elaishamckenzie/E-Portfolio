@@ -27,49 +27,28 @@ body nav a:hover {
 }
 body nav .active {
   background-color: #1a1d23;
-  border-radius: 0 50% 50% 0;
 }
 body nav .active:hover {
   background-color: rgba(255, 157, 0, 0.505);
 }
-body main {
-  display: flex;
-  flex-wrap: wrap;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  max-width: 175vh;
-  margin: auto;
-  align-self: center;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  cursor: url("../img/png-transparent-match-matches-fire-matchbox-cartoon-safety-matchstick-isolated-ignite-graphic-thumbnail_1-removebg-preview.png");
-}
-@media (max-width: 480px) {
-  body main {
-    flex-direction: column;
-    padding: 0;
-  }
-}
-body main section {
+body .hero {
   width: 50%;
 }
-body main section:nth-child(1) img {
+body .hero:nth-child(1) img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
-body main section:nth-child(2) {
+body .hero:nth-child(2) {
   flex: 1 0;
   padding: 10px;
 }
-body main section:nth-child(2) button {
+body .hero:nth-child(2) button {
   margin-left: auto;
   border: none;
 }
-body main section:nth-child(2) button:hover {
+body .hero:nth-child(2) button:hover {
   color: black;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

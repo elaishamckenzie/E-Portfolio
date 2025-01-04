@@ -5,12 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soft buckets</title>
     <link rel="stylesheet" href="Sassy folder/style.css">
+    <style>
+        body main {
+            display: flex;
+            flex-wrap: wrap;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin: auto;
+            max-width: 175vh;
+            margin: auto;
+            align-self: center;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            cursor: url("../img/png-transparent-match-matches-fire-matchbox-cartoon-safety-matchstick-isolated-ignite-graphic-thumbnail_1-removebg-preview.png");
+            }
+            @media (max-width: 480px) {
+            body main {
+                flex-direction: column;
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="active">Home</a>
-        <a href="https://on.soundcloud.com/W4rpoig964zH7oBN9" target="_blank">Music</a>
-        <a href="https://substack.com/@elaisha" target="_blank">Writing</a>
+        <!-- change this 2 lines below into individual pages -->
+        <!-- <a href="https://on.soundcloud.com/W4rpoig964zH7oBN9" target="_blank">Music</a> -->
+        <!-- <a href="https://substack.com/@elaisha" target="_blank">Writing</a> -->
+        <a href="pages/music.html">Music</a>
+        <a href="pages/writing.html">Writing</a>
         <a href="pages/projects.html">Projects</a>
         <a href="pages/shows.html">Shows</a>
         <a href="pages/resources.html">Resources</a>
@@ -18,10 +43,10 @@
         <a href="pages/newsletter.html">Newsletter</a>
     </nav>
     <main>
-        <section>
+        <section class="hero">
             <img src="img/softbuckets wix.png" alt="candle image">
         </section>
-        <section>
+        <section class="hero">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, non.
             </p>

@@ -41,61 +41,38 @@ body {
         .active{
             background-color: #1a1d23;
             // curving corners [ topleft | topright | bottomright | bottomleft ]
-            border-radius: 0 50% 50% 0;
+            // border-radius: 0 50% 50% 0;
             &:hover{
                 background-color: rgba(255, 157, 0, 0.505);
             }
         }
     }
 
-    // body's child 2
-    main {
-        display: flex;
-        flex-wrap: wrap;
-        width: fit-content;
-        margin: auto;
-        // that's the max i could go before it hit the scroll option
-        // it means that generally it will be fit-content but if the width is too big it will stop at 170% of the view height cuz width is typically longer than height
-        max-width: 175vh;
-        margin: auto;
-        align-self: center;
-        justify-content: space-around;
-        align-items: center;
-        // background-color: aqua;
-        padding: 20px;
-        cursor: url('../img/png-transparent-match-matches-fire-matchbox-cartoon-safety-matchstick-isolated-ignite-graphic-thumbnail_1-removebg-preview.png');
-        @media (max-width: 480px) {
-            // this media part means all the code i wrote here is only affected if screen width is 480 or below for mobile screen. they are called media queries
-            flex-direction: column;
-            padding: 0;
-        }
-
-        // all sections being selected inside main
-        section {
-            // since the main layout has 2 children. giving width 50% means it will take half the size
-            // so both the sections will be 50% in width and fit inside the main which is 100%
-            width: 50%;
-            // background-color: red;
-            // first child inside main and also &:nth-child() is same like section:nth-child()
-            &:nth-child(1) {
-                img {
-                    // keeps the aspect. ig i need some time experimenting sometimes on my own cuz gpt will prompt a 4 line code for no reason but it's ok as long as it works
-                    width: 100%;
-                    height: auto;
-                    object-fit: contain;
-                }
+    // all sections being selected inside main
+    .hero {
+        // since the main layout has 2 children. giving width 50% means it will take half the size
+        // so both the sections will be 50% in width and fit inside the main which is 100%
+        width: 50%;
+        // background-color: red;
+        // first child inside main and also &:nth-child() is same like section:nth-child()
+        &:nth-child(1) {
+            img {
+                // keeps the aspect. ig i need some time experimenting sometimes on my own cuz gpt will prompt a 4 line code for no reason but it's ok as long as it works
+                width: 100%;
+                height: auto;
+                object-fit: contain;
             }
-            // second child of main which is selecting a specific section:nth-child(2) inside main only. not all sections in the html
-            &:nth-child(2) {
-                flex: 1 0;
-                padding: 10px;
-                button{
-                    margin-left: auto;
-                    border: none;
-                    &:hover {
-                        color: black;
-                        cursor: pointer;
-                    }
+        }
+        // second child of main which is selecting a specific section:nth-child(2) inside main only. not all sections in the html
+        &:nth-child(2) {
+            flex: 1 0;
+            padding: 10px;
+            button{
+                margin-left: auto;
+                border: none;
+                &:hover {
+                    color: black;
+                    cursor: pointer;
                 }
             }
         }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+    <link rel="stylesheet" href="../Sassy folder/style.css">
+    <style>
+        main {
+            height: 93vh;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            }
+        /* Hide scrollbar for webkit browsers */
+        section::-webkit-scrollbar, p::-webkit-scrollbar {
+            display: none;
+        }
+
+        section {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: blueviolet;
+            flex: 1;
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Adds space between articles */
+            overflow-y: scroll;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+        
+        article {
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: all 0.4s ease;
+            border: 1px solid #ccc;
+            flex: 1 1 clamp(200px, 30%, 300px);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            display: none; /* Hidden by default */
+            margin-top: 10px;
+            max-height: 500px;
+            overflow-y: scroll;
+
+            /* Hide scrollbar */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+
+        p::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Active article expands */
+        article.active {
+            background-color: blue;
+            flex: 1 1 100%; /* Full width of the parent container */
+            height: fit-content;
+        }
+
+        /* Show content inside the active article */
+        article.active p {
+            display: block;
+        }
+
+        section:has(.article.active) .article:not(.active) {
+            flex: 1 1 calc(50% - 10px); /* Becomes a rectangles and fit the remaining space */
+            aspect-ratio: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="./music.html">Music</a>
+        <a href="./writing.html" class="active">Writing</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./shows.html">Shows</a>
+        <a href="./resources.html">Resources</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./newsletter.html">Newsletter</a>
+    </nav>
+    <main>
+        <h1>Writing</h1>
+        <section>
+            <article class="article">
+                <h2 class="article-title">Article 1</h2>
+                <p class="article-content">This is the content of Article 1.</p>
+            </article>
+        
+            <article class="article">
+                <h2 class="article-title">Article 2 </h2>
+                <p class="article-content">This is the content of Article 2.</p>
+            </article>
+        
+            <article class="article">
+                <h2 class="article-title">Article 3</h2>
+                <p class="article-content">This is the content of Article 3.</p>
+            </article>
+        
+            <article class="article">
+                <h2 class="article-title">Article 4</h2>
+                <p class="article-content">This is the content of Article 4.</p>
+            </article>
+            <article class="article">
+                <h2 class="article-title">Article 5</h2>
+                <p class="article-content">This is the content of Article 5.</p>
+            </article>
+            <article class="article">
+                <h2 class="article-title">Article 6</h2>
+                <p class="article-content">This is the content of Article 6.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const articles = document.querySelectorAll('.article');
+        articles.forEach((article) => {
+            article.addEventListener('click', () => {
+                // Check if the clicked article is already active
+                const isActive = article.classList.contains('active');
+
+                // Remove 'active' from all articles
+                articles.forEach((a) => a.classList.remove('active'));
+
+                // If it wasn't active, activate it; otherwise, leave it inactive (toggle behavior)
+                if (!isActive) {
+                    article.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
