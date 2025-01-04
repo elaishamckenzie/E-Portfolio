@@ -1,0 +1,25 @@
+main {
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    }
+/* Hide scrollbar for webkit browsers */
+section::-webkit-scrollbar, article::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: blueviolet;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+article {
+    width: 100%;
+    background-color: blue;
+    padding: 5px;
+    overflow-x: scroll;
+}
